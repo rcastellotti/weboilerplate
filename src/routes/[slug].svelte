@@ -1,5 +1,5 @@
 <script context="module">
-    import Share from '$components/Share.svelte';
+	import Share from '$components/Share.svelte';
 	import { apiUrl } from '$lib/variables';
 	export async function load({ page, fetch, session, stuff }) {
 		if (page.params.slug == 'bootstrap.min.css.map') return;
@@ -20,9 +20,7 @@
 </script>
 
 <script>
-
 	export let sign;
-	
 </script>
 
 <div class="rounded-lg relative h-64 min-h-full bg-col" id="sign">
@@ -48,8 +46,5 @@
 		height: 15rem;
 		width: 98%;
 		height: 95%;
-	}
-	textarea {
-		background-color: transparent !important;
 	}
 </style>
