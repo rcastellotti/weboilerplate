@@ -3,7 +3,3 @@ node_modules
 /build
 /.svelte-kit
 /package
-venv/
-__pycache__/
-.netlify
-.env
