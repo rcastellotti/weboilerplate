@@ -15,7 +15,7 @@
 	}
 </script>
 
-<div class=" grid {$isMobile ? 'grid-cols-4' : 'grid-cols-3'} gap-1">
+<div class="grid {$isMobile ? 'grid-cols-4' : 'grid-cols-3'} gap-1">
 	<a href="https://telegram.me/share/url?text=&url=https://signs.rcastellotti.dev{slug}">
 		<svg
 			xmlns="http://www.w3.org/2000/svg"

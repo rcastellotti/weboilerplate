@@ -11,7 +11,9 @@
 	<slot />
 	<p class="text-sm flex justify-center mt-1 ">
 		made with 🛣️,🚘,🚧 by <span class="ml-1"
-			><a class="hover:underline" href="https://rcastellotti.dev"> rcastellotti</a></span
+			><a class="hover:bg-blue-300 text-blue-700 hover:underline" href="https://rcastellotti.dev">
+				rcastellotti</a
+			></span
 		>
 	</p>
 </main>
