@@ -1,5 +1,10 @@
 <script>
 	import '../app.css';
+	import { onMount } from 'svelte';
+	import { isMobile } from '$lib/stores';
+	onMount(() => {
+		isMobile.set(true)
+	});
 </script>
 
 <main class="w-2/3 m-2 mx-auto">
@@ -10,6 +15,8 @@
 		>
 	</p>
 </main>
+
+{$isMobile}
 
 <style>
 	main {

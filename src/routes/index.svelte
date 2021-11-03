@@ -1,12 +1,17 @@
 <script>
 	import { onMount } from 'svelte';
 	import { apiUrl } from '$lib/variables';
+	import Share from '$components/Share.svelte';
+	import { isMobile } from '$lib/stores.js';
+
 	let message = '';
 	let messageInput;
 	let response,
 		err = '';
-	// this works here, but not in Sapper:
-	onMount(() => messageInput.focus());
+	onMount(() => {
+		messageInput.focus();
+		$isMobile = navigator.userAgentData.mobile; //resolves true/false
+	});
 
 	async function saveMessage() {
 		await fetch(apiUrl, {
@@ -56,7 +61,7 @@
 			</p>
 		</div>
 		<div class="flex justify-between items-end">
-			<p />
+			<Share slug="/" isMobile />
 			{#if response}
 				<p class="text1 text-yellow-400">
 					successfully created sign <a
@@ -68,7 +73,7 @@
 			{#if err != ''}
 				<p class="text1 text-red-400">an error occurred :(</p>
 			{/if}
-			<div class="flex flex-col">
+			<div class="flex items-center flex-col">
 				<p
 					class="text1 {message.length < 50
 						? 'text-green-400'
@@ -80,7 +85,7 @@
 				</p>
 				<button
 					on:click={saveMessage}
-					class="disabled:opacity-50 p-2 rounded-lg bg-green-600 active:bg-green-700 text-white"
+					class="disabled:opacity-50 p-2 rounded-lg bg-green-600 active:bg-green-700  text-white"
 					disabled={message.length < 1}
 					>save
 				</button>
@@ -90,7 +95,6 @@
 </div>
 
 <style>
-
 	.inside {
 		height: 15rem;
 		width: 98%;
