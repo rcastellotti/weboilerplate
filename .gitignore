@@ -5,3 +5,5 @@ node_modules
 /package
 venv/
 __pycache__/
+.netlify
+.env
