@@ -2,20 +2,17 @@
 	import '../app.css';
 </script>
 
-<main>
+<main class="w-2/3 m-2 mx-auto">
 	<slot />
+	<p class="text-sm flex justify-center mt-1 ">
+		made with 🛣️,🚘,🚧 by <span class="ml-1"
+			><a class="hover:underline" href="https://rcastellotti.dev"> rcastellotti</a></span
+		>
+	</p>
 </main>
 
 <style>
 	main {
-		font-family: 'Electronic Highway Sign' !important;
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 1024px;
-		margin: 0 auto;
-		box-sizing: border-box;
+		font-family: 'Electronic Highway sign' !important;
 	}
 </style>

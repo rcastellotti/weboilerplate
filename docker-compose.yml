@@ -1,0 +1,14 @@
+version: '3'
+services:
+  db:
+    image: postgres:alpine
+    environment:
+      POSTGRES_DB: signs
+      POSTGRES_USER: rc
+      POSTGRES_PASSWORD: ilovebears
+    ports:
+      - 5432:5432
+    volumes:
+      - ./pgdocker/:/var/lib/postgresql/data
+
+  
