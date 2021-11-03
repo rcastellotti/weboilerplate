@@ -12,7 +12,7 @@ services:
       - ./pgdocker/:/var/lib/postgresql/data
     networks:
       - web
-  api:
+  backend:
     image: registry.gitlab.com/rcastellotti/autostrade
     environment:
       DB: signs
