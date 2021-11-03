@@ -60,15 +60,10 @@
 
 <svelte:window on:keydown={handleKeydown} />
 
-<div
-	class="p-3 grid grid-cols-1 gap-5  justify-between rounded-lg bg-black w-full h-full  border-10 border-col"
->
+<div class="p-3 grid grid-cols-1 gap-5 rounded-lg bg-black w-full h-full  border-10 border-col">
 	<div class="flex justify-between items-center">
-		<div class="inline-grid grid-cols-2 gap-px">
-			<div class="flex-shrink-0 rounded-lg w-24 h-32 bg-col" />
-			<div class="flex-shrink-0 rounded-lg ml-2 w-24 h-32 bg-col hidden lg:block" />
-		</div>
-		<p class=" w-9/12 text-2xl lg:text-5xl text-yellow-400">
+		<div class="ml-5 flex-shrink-0 rounded-lg w-24 h-32 bg-col" />
+		<div class=" w-9/12 text-2xl lg:text-5xl text-yellow-400">
 			{#if edit}
 				<textarea
 					class="resize-none w-full h-full bg-transparent"
@@ -80,7 +75,7 @@
 			{:else}
 				{sign}
 			{/if}
-		</p>
+		</div>
 	</div>
 
 	<div class="flex justify-between items-center">
