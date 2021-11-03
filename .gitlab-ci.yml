@@ -1,4 +1,6 @@
-image: docker/compose:1.29.2
+image: docker:latest
+services:
+  - registry.hub.docker.com/library/docker:19.03.12-dind
 build:
   stage: build
   before_script:
