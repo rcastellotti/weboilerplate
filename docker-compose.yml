@@ -13,7 +13,7 @@ services:
     networks:
       - web
   backend:
-    image: registry.gitlab.com/rcastellotti/autostrade
+    image: registry.gitlab.com/rcastellotti/signs.rcastellotti.dev/backend:latest
     environment:
       DB: signs
       USER: rc
@@ -31,7 +31,7 @@ services:
       - traefik.http.routers.signs.tls.certresolver=lets-encrypt
       - traefik.port=5000
   frontend:
-    image: registry.gitlab.com/rcastellotti/autostrade/frontend:latest
+    image: registry.gitlab.com/rcastellotti/signs.rcastellotti.dev/frontend:latest
     container_name: autostrade-frontend
     ports:
       - 3000:3000
