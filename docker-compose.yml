@@ -17,11 +17,11 @@ services:
     environment:
       DB: signs
       USER: rc
-      PASSWORD: ilovebears
-    ports:
-      - 5002:5000
+      PASSW0ORD: ilovebears
     depends_on:
       - 'db'
+    ports:
+      - 5003:5000
     restart: always
     networks:
       - web
@@ -29,22 +29,21 @@ services:
       - traefik.http.routers.signs.rule=Host(`signs-api.rcastellotti.dev`)
       - traefik.http.routers.signs.tls=true
       - traefik.http.routers.signs.tls.certresolver=lets-encrypt
-      - traefik.port=5000
+      - traefik.port=5003
   frontend:
     image: registry.gitlab.com/rcastellotti/signs.rcastellotti.dev/frontend:latest
-    container_name: autostrade-frontend
     ports:
-      - 3002:3000
+      - 3003:3000
     depends_on:
       - 'backend'
     restart: always
     networks:
       - web
     labels:
-      - traefik.http.routers.frontend.rule=Host(`signs.rcastellotti.dev`)
-      - traefik.http.routers.frontend.tls=true
-      - traefik.http.routers.frontend.tls.certresolver=lets-encrypt
-      - traefik.port=3000
+      - traefik.http.routers.signs-frontend.rule=Host(`signs.rcastellotti.dev`)
+      - traefik.http.routers.signs-frontend.tls=true
+      - traefik.http.routers.signs-frontend.tls.certresolver=lets-encrypt
+      - traefik.port=3003
 
 networks:
   web:
