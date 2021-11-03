@@ -1,6 +1,6 @@
-image: docker:latest
+image: docker:20
 services:
-  - registry.hub.docker.com/library/docker:19.03.12-dind
+  - docker:dind
 build:
   stage: build
   before_script:
