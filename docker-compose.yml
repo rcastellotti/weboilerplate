@@ -10,5 +10,25 @@ services:
       - 5432:5432
     volumes:
       - ./pgdocker/:/var/lib/postgresql/data
+  api:
+    image: registry.gitlab.com/rcastellotti/autostrade
+    environment:
+      POSTGRES_DB: signs
+      POSTGRES_USER: rc
+      POSTGRES_PASSWORD: ilovebears
+    ports:
+      - 5000:5000
+    depends_on:
+      - 'db'
+    restart: always
+    networks:
+      - web
+    labels:
+      - traefik.http.routers.signs.rule=Host(`signs.rcastellotti.dev`)
+      - traefik.http.routers.signs.tls=true
+      - traefik.http.routers.signs.tls.certresolver=lets-encrypt
+      - traefik.port=5000
 
-  
+networks:
+  web:
+    external: true

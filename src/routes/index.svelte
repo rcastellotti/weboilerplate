@@ -31,11 +31,11 @@
 
 			.then((res) => {
 				response = res;
-				setTimeout(() => (response = ''), 1000);
+				setTimeout(() => (response = ''), 2000);
 			})
 			.catch((error) => {
 				err = error;
-				setTimeout(() => (err = ''), 1000);
+				setTimeout(() => (err = ''), 3000);
 			});
 	}
 </script>
@@ -46,8 +46,8 @@
 	>
 		<div class="flex mt-5 mx-5">
 			<div class="flex-shrink-0 rounded-lg w-24 h-32 bg-col" />
-			<div class="flex-shrink-0 rounded-lg ml-2 w-24 h-32 bg-col" />
-			<p class=" text1 mx-5 text text-5xl text-yellow-400 ">
+			<div class="flex-shrink-0 rounded-lg ml-2 w-24 h-32 bg-col hidden lg:block" />
+			<p class=" text1 mx-5 text text-2xl lg:text-5xl text-yellow-400 ">
 				<textarea
 					maxlength="63"
 					bind:this={messageInput}

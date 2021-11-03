@@ -1,4 +1,5 @@
 <script context="module">
+    import Share from '$components/Share.svelte';
 	import { apiUrl } from '$lib/variables';
 	export async function load({ page, fetch, session, stuff }) {
 		if (page.params.slug == 'bootstrap.min.css.map') return;
@@ -19,7 +20,6 @@
 </script>
 
 <script>
-	import Share from '$components/Share.svelte';
 
 	export let sign;
 	function share() {

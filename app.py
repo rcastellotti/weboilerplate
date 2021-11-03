@@ -2,9 +2,13 @@ from flask import Flask, request
 from flask_sqlalchemy import SQLAlchemy
 from nanoid import generate
 from flask_cors import CORS
+import os
 
+db = os.getenv("POSTGRES_DB")
+user = os.getenv("POSTGRES_USER")
+password = os.getenv("POSTGRES_PASSWORD")
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://rc:ilovebears@localhost/signs'
+app.config['SQLALCHEMY_DATABASE_URI'] = f'postgresql+psycopg2://{user}:{password}@db/{db}'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 CORS(app)
