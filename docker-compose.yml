@@ -3,12 +3,14 @@ services:
   backend:
     image: registry.gitlab.com/rcastellotti/signs.rcastellotti.dev/backend:latest
     environment:
-      DB: /home/rc/signs.sqlite3
+      DB: signs.sqlite3
     ports:
       - 5003:5000
     restart: always
     networks:
       - web
+    volumes:
+      - /home/rc/signs.sqlite3:/signs.sqlite3"
     labels:
       - traefik.http.routers.signs.rule=Host(`signs-api.rcastellotti.dev`)
       - traefik.http.routers.signs.tls=true
