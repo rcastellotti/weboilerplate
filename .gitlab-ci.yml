@@ -9,6 +9,6 @@ build:
     - docker build -t registry.gitlab.com/rcastellotti/signs.rcastellotti.dev/frontend:latest .
     - docker push registry.gitlab.com/rcastellotti/signs.rcastellotti.dev/frontend:latest
     - docker build -t registry.gitlab.com/rcastellotti/signs.rcastellotti.dev/backend:latest ./backend
-    - docker push registry.gitlab.com/rcastellotti/signs.rcastellotti.dev/backend/latest
+    - docker push registry.gitlab.com/rcastellotti/signs.rcastellotti.dev/backend:latest
   only:
     - main
