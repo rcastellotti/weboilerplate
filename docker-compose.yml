@@ -1,25 +1,9 @@
 version: '3'
 services:
-  db:
-    image: postgres:alpine
-    environment:
-      POSTGRES_DB: signs
-      POSTGRES_USER: rc
-      POSTGRES_PASSWORD: ilovebears
-    ports:
-      - 5432:5432
-    volumes:
-      - ./pgdocker/:/var/lib/postgresql/data
-    networks:
-      - web
   backend:
     image: registry.gitlab.com/rcastellotti/signs.rcastellotti.dev/backend:latest
     environment:
-      DB: signs
-      USER: rc
-      PASSW0ORD: ilovebears
-    depends_on:
-      - 'db'
+      DB: /home/rc/signs.sqlite3
     ports:
       - 5003:5000
     restart: always

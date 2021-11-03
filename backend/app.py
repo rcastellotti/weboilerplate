@@ -5,10 +5,9 @@ from flask_cors import CORS
 import os
 
 database = os.getenv("DB")
-user = os.getenv("USER")
-password = os.getenv("PASSWORD")
+
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = f'postgresql+psycopg2://{user}:{password}@db/{database}'
+app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{database}'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 CORS(app)
