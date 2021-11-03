@@ -1,45 +1,23 @@
 <script>
-	import Header from '$lib/header/Header.svelte';
 	import '../app.css';
+	import { onMount } from 'svelte';
+	import { isMobile } from '$lib/stores';
+	onMount(() => {
+		isMobile.set(true);
+	});
 </script>
 
-<Header />
-
-<main>
+<main class=" w-100 m-1 lg:w-2/3 mx-auto">
 	<slot />
+	<p class="text-sm flex justify-center mt-1 ">
+		made with 🛣️,🚘,🚧 by <span class="ml-1"
+			><a class="hover:underline" href="https://rcastellotti.dev"> rcastellotti</a></span
+		>
+	</p>
 </main>
-
-<footer>
-	<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-</footer>
 
 <style>
 	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 1024px;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
-
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 40px;
-	}
-
-	footer a {
-		font-weight: bold;
-	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 40px 0;
-		}
+		font-family: 'Electronic Highway sign' !important;
 	}
 </style>
