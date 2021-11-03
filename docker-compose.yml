@@ -19,7 +19,7 @@ services:
       USER: rc
       PASSWORD: ilovebears
     ports:
-      - 5000:5000
+      - 5002:5000
     depends_on:
       - 'db'
     restart: always
@@ -34,7 +34,7 @@ services:
     image: registry.gitlab.com/rcastellotti/signs.rcastellotti.dev/frontend:latest
     container_name: autostrade-frontend
     ports:
-      - 3000:3000
+      - 3002:3000
     depends_on:
       - 'backend'
     restart: always
