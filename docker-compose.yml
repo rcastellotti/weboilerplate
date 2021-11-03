@@ -2,6 +2,8 @@ version: '3'
 services:
   db:
     image: postgres:alpine
+    container_name: autostrade-db
+
     environment:
       POSTGRES_DB: signs
       POSTGRES_USER: rc
@@ -10,8 +12,9 @@ services:
       - 5432:5432
     volumes:
       - ./pgdocker/:/var/lib/postgresql/data
-  api:
+  backend:
     image: registry.gitlab.com/rcastellotti/autostrade
+    container_name: autostrade-backend
     environment:
       DB: signs
       USER: rc
@@ -28,6 +31,23 @@ services:
       - traefik.http.routers.signs.tls=true
       - traefik.http.routers.signs.tls.certresolver=lets-encrypt
       - traefik.port=5000
+   frontend:
+    image: registry.gitlab.com/rcastellotti/autostrade-frontend/frontend:latest
+    container_name: autostrade-frontend
+    env_file:
+      - .env.prod
+    ports:
+      - 3000:3000
+    depends_on:
+      - "backend"
+    restart: always
+    networks:
+      - web
+    labels:
+      - traefik.http.routers.frontend.rule=Host(`signs.rcastellotti.dev`)
+      - traefik.http.routers.frontend.tls=true
+      - traefik.http.routers.frontend.tls.certresolver=lets-encrypt
+      - traefik.port=3000
 
 networks:
   web:
