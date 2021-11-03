@@ -13,9 +13,9 @@ services:
   api:
     image: registry.gitlab.com/rcastellotti/autostrade
     environment:
-      POSTGRES_DB: signs
-      POSTGRES_USER: rc
-      POSTGRES_PASSWORD: ilovebears
+      DB: signs
+      USER: rc
+      PASSWORD: ilovebears
     ports:
       - 5000:5000
     depends_on:
