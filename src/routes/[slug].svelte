@@ -22,18 +22,7 @@
 <script>
 
 	export let sign;
-	function share() {
-		if (navigator.share) {
-			navigator
-				.share({
-					title: 'web.dev',
-					text: 'Check out web.dev.',
-					url: 'https://web.dev/'
-				})
-				.then(() => console.log('Successful share'))
-				.catch((error) => console.log('Error sharing', error));
-		}
-	}
+	
 </script>
 
 <div class="rounded-lg relative h-64 min-h-full bg-col" id="sign">
@@ -48,7 +37,7 @@
 			</p>
 		</div>
 
-		<div class="flex justify-end">
+		<div class="flex justify-end m-1">
 			<Share slug={`/${sign.slug}`} navigator />
 		</div>
 	</div>

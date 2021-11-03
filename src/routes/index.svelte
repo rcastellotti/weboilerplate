@@ -42,7 +42,7 @@
 
 <div class="rounded-lg relative h-64 min-h-full bg-col" id="message">
 	<div
-		class="relative flex flex-col rounded-lg bg-black inside absolute top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2"
+		class=" flex flex-col justify-between rounded-lg bg-black inside absolute top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2"
 	>
 		<div class="flex mt-5 mx-5">
 			<div class="flex-shrink-0 rounded-lg w-24 h-32 bg-col" />
@@ -60,7 +60,7 @@
 				/>
 			</p>
 		</div>
-		<div class="flex justify-between items-end">
+		<div class="m-2 flex justify-between items-end">
 			<Share slug="/" isMobile />
 			{#if response}
 				<p class="text1 text-yellow-400">
@@ -85,7 +85,7 @@
 				</p>
 				<button
 					on:click={saveMessage}
-					class="disabled:opacity-50 p-2 rounded-lg bg-green-600 active:bg-green-700  text-white"
+					class="p-1 disabled:opacity-50  rounded-lg bg-green-600 active:bg-green-700  text-white"
 					disabled={message.length < 1}
 					>save
 				</button>

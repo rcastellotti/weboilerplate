@@ -1,9 +1,21 @@
 <script>
 	export let slug;
 	import { isMobile } from '$lib/stores.js';
+	function share() {
+		if (navigator.share) {
+			navigator
+				.share({
+					title: 'signs.rcastellotti.dev',
+					text: 'create your custom led road sign.',
+					url: `https://signs.rcastellotti.dev${slug}`
+				})
+				.then(() => console.log('Successful share'))
+				.catch((error) => console.log('Error sharing', error));
+		}
+	}
 </script>
 
-<div class="m-1 grid {$isMobile? "grid-cols-4":"grid-cols-3"} gap-1">
+<div class=" grid {$isMobile ? 'grid-cols-4' : 'grid-cols-3'} gap-1">
 	<a href="https://telegram.me/share/url?text=&url=https://signs.rcastellotti.dev{slug}">
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -48,15 +60,17 @@
 	</a>
 
 	{#if $isMobile}
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="currentColor"
-			class="rounded-lg p-1 h-8 w-8 text-yellow-400 hover:bg-yellow-400 hover:text-black"
-			viewBox="0 0 16 16"
+		<button class="inline" on:click={share}>
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				fill="currentColor"
+				class="rounded-lg p-1 h-8 w-8 text-yellow-400 hover:bg-yellow-400 hover:text-black"
+				viewBox="0 0 16 16"
+			>
+				<path
+					d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z"
+				/>
+			</svg></button
 		>
-			<path
-				d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z"
-			/>
-		</svg>
 	{/if}
 </div>
