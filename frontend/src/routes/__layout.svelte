@@ -1,7 +1,7 @@
 <script>
 	import '../app.css';
-	import { onMount } from 'svelte';
-	import { isMobile } from '$lib/stores';
+	import { onMount } from 'frontend/node_modules/svelte/types/runtime';
+	import { isMobile } from 'frontend/src/lib/stores';
 	onMount(() => {
 		isMobile.set(true);
 	});

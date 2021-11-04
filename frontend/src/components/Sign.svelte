@@ -1,6 +1,6 @@
 <script>
-	import { onMount } from 'svelte';
-	import { apiUrl } from '$lib/variables';
+	import { onMount } from 'frontend/node_modules/svelte/types/runtime';
+	import { apiUrl } from 'frontend/src/lib/variables';
 	import { goto } from '$app/navigation';
 	export let edit, sign, e;
 	let message = '';
