@@ -2,4 +2,4 @@
 	import Sign from '$components/Sign.svelte';
 </script>
 
-<Sign edit={true} />
+<Sign message="" edit={true} />

@@ -87,7 +87,7 @@
 				width="16"
 				height="16"
 				fill="currentColor"
-				class="telegram rounded-lg p-1 h-8 w-8 text-yellow-400 hover:bg-yellow-400 hover:text-black"
+				class=" rounded-lg p-1 h-8 w-8 text-yellow-400 hover:bg-yellow-400 hover:text-black"
 				viewBox="0 0 16 16"
 			>
 				<path
