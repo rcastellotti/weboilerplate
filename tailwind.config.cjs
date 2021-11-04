@@ -5,11 +5,12 @@ const config = {
 	theme: {
 		backgroundColor: (theme) => ({
 			...theme('colors'),
-			col: '#161616'
+			col: '#161616',
+			bg: '#1c1c1c'
 		}),
 		borderColor: (theme) => ({
 			...theme('colors'),
-			col: '#161616'
+			col: '#161616',
 		}),
 		borderWidth: {
 			DEFAULT: '1px',
