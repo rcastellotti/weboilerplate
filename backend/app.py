@@ -11,8 +11,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = database
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 CORS(app)
-if not db.engine.dialect.has_table(db.engine.connect(), "signs"):
-    db.create_all()
+
 
 
 class Signs(db.Model):
