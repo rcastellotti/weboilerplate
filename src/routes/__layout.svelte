@@ -7,7 +7,7 @@
 	});
 </script>
 
-<main class=" w-100 m-1 lg:w-2/3 mx-auto">
+<main class="w-100 p-1 lg:w-2/3 mx-auto">
 	<slot />
 	<p class="text-sm flex justify-center mt-1 ">
 		made with 🛣️,🚘,🚧 by <span class="ml-1"

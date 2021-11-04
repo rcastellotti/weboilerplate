@@ -62,8 +62,8 @@
 
 <div class="p-3 grid grid-cols-1 gap-5 rounded-lg bg-black w-full h-full  border-10 border-col">
 	<div class="flex justify-between items-center">
-		<div class="ml-5 flex-shrink-0 rounded-lg w-24 h-32 bg-col" />
-		<div class="w-9/12 text-2xl lg:text-5xl {e ? 'text-center text-red-500' : 'text-yellow-400'}">
+		<div class="mx-5 flex-shrink-0 rounded-lg w-24 h-32 bg-col" />
+		<div class=" w-9/12 text-2xl lg:text-5xl {e ? 'text-center text-red-500' : 'text-yellow-400'}">
 			{#if edit}
 				<textarea
 					class="resize-none w-full h-full bg-transparent"
@@ -81,7 +81,25 @@
 	</div>
 
 	<div class="flex justify-between items-center">
-		<p />
+		<a href="/">
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				width="16"
+				height="16"
+				fill="currentColor"
+				class="telegram rounded-lg p-1 h-8 w-8 text-yellow-400 hover:bg-yellow-400 hover:text-black"
+				viewBox="0 0 16 16"
+			>
+				<path
+					fill-rule="evenodd"
+					d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"
+				/>
+				<path
+					fill-rule="evenodd"
+					d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"
+				/>
+			</svg>
+		</a>
 		{#if edit}
 			{#if response}
 				<p class="text1 text-yellow-400">
