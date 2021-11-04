@@ -59,7 +59,7 @@
 		</svg>
 	</a>
 
-	{#if $isMobile}
+	<!-- {#if $isMobile}
 		<button class="inline" on:click={share}>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -72,5 +72,5 @@
 				/>
 			</svg></button
 		>
-	{/if}
+	{/if} -->
 </div>

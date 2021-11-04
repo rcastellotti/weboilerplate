@@ -119,7 +119,7 @@
 				>save
 			</button>
 		{:else}
-			<Share slug="/" isMobile />
+			<Share slug={response} isMobile />
 		{/if}
 	</div>
 </div>
