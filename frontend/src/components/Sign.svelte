@@ -1,6 +1,6 @@
 <script>
-	import { onMount } from 'frontend/node_modules/svelte/types/runtime';
-	import { apiUrl } from 'frontend/src/lib/variables';
+	import { onMount } from 'svelte';
+	import { apiUrl } from '/lib/variables';
 	import { goto } from '$app/navigation';
 	export let edit, sign, e;
 	let message = '';
@@ -117,7 +117,9 @@
 			</button>
 		{:else}
 			<div class="grid grid-cols-3 gap-1">
-				<a href="https://telegram.me/share/url?text=&url=https://signs.rcastellotti.dev/{sign.slug}">
+				<a
+					href="https://telegram.me/share/url?text=&url=https://signs.rcastellotti.dev/{sign.slug}"
+				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="16"
@@ -145,7 +147,9 @@
 						/>
 					</svg>
 				</a>
-				<a href="https://twitter.com/intent/tweet/?text=&url=https://signs.rcastellotti.dev/{sign.slug}">
+				<a
+					href="https://twitter.com/intent/tweet/?text=&url=https://signs.rcastellotti.dev/{sign.slug}"
+				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="16"
@@ -160,7 +164,6 @@
 					</svg>
 				</a>
 			</div>
-			
 		{/if}
 	</div>
 </div>

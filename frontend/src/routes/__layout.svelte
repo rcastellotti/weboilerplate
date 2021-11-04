@@ -1,10 +1,5 @@
 <script>
 	import '../app.css';
-	import { onMount } from 'frontend/node_modules/svelte/types/runtime';
-	import { isMobile } from 'frontend/src/lib/stores';
-	onMount(() => {
-		isMobile.set(true);
-	});
 </script>
 
 <main class="flex flex-col h-screen justify-between w-100 p-1 lg:w-2/3 mx-auto">
