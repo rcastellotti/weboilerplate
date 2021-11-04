@@ -1,9 +1,14 @@
 version: '3'
 services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: example
   backend:
     image: registry.gitlab.com/rcastellotti/signs.rcastellotti.dev/backend:latest
     environment:
-      DB: postgresql+psycopg2://rc:{password}@localhost/signs
+      DB: postgresql+psycopg2://postgres:example@db/public
     ports:
       - 5003:5000
     restart: always
@@ -32,4 +37,4 @@ services:
 
 networks:
   web:
-    external: true
+    # external: true
