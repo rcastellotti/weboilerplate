@@ -27,5 +27,5 @@
 {#if error}
 	<Sign e={error} />
 {:else}
-	<Sign sign={sign.message} />
+	<Sign sign={sign} />
 {/if}
