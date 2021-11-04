@@ -4,7 +4,7 @@
 	import Share from '$components/Share.svelte';
 	import { isMobile } from '$lib/stores.js';
 	import { goto } from '$app/navigation';
-	export let edit, sign;
+	export let edit, sign, e;
 	let message = '';
 	let messageInput;
 	let response, ctrl;
@@ -63,7 +63,7 @@
 <div class="p-3 grid grid-cols-1 gap-5 rounded-lg bg-black w-full h-full  border-10 border-col">
 	<div class="flex justify-between items-center">
 		<div class="ml-5 flex-shrink-0 rounded-lg w-24 h-32 bg-col" />
-		<div class=" w-9/12 text-2xl lg:text-5xl text-yellow-400">
+		<div class="w-9/12 text-2xl lg:text-5xl {e ? 'text-center text-red-500' : 'text-yellow-400'}">
 			{#if edit}
 				<textarea
 					class="resize-none w-full h-full bg-transparent"
@@ -72,6 +72,8 @@
 					rows="3"
 					placeholder="create your custom led message"
 				/>
+			{:else if e}
+				<p class=" w-9/12 text-2xl lg:text-5xl text-red-400">{e}</p>
 			{:else}
 				{sign}
 			{/if}

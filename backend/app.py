@@ -7,11 +7,10 @@ import os
 database = os.getenv("DB")
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = database
+app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:////tmp/test.db"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 CORS(app)
-
 
 
 class Signs(db.Model):
@@ -35,9 +34,10 @@ def add():
 
 @ app.get("/api/<slug>")
 def get(slug):
-    sign = Signs.query.filter_by(slug=slug).first()
+    sign = Signs.query.filter_by(slug=slug).first_or_404()
     return sign.as_dict(), 200
 
 
 if __name__ == "__main__":
+    db.create_all()
     app.run(host="0.0.0.0", port=8000, debug=True)
