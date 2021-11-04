@@ -39,5 +39,7 @@ def get(slug):
 
 
 if __name__ == "__main__":
-    db.create_all()
+
+    if not db.engine.dialect.has_table(db.engine.connect(), "signs"):
+        db.create_all()
     app.run(host="0.0.0.0", port=8000, debug=True)

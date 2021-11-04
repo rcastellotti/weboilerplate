@@ -5,10 +5,14 @@ services:
     restart: always
     environment:
       POSTGRES_PASSWORD: example
+      POSTGRES_DB: signs
+
+    networks:
+      - web
   backend:
     image: registry.gitlab.com/rcastellotti/signs.rcastellotti.dev/backend:latest
     environment:
-      DB: postgresql+psycopg2://postgres:example@db/public
+      DB: postgresql+psycopg2://postgres:example@db/signs
     ports:
       - 5003:5000
     restart: always
