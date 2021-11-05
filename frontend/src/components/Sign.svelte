@@ -1,6 +1,5 @@
 <script>
 	import { onMount } from 'svelte';
-	import { apiUrl } from '/lib/variables';
 	import { goto } from '$app/navigation';
 	export let edit, sign, e;
 	let message = '';
@@ -12,7 +11,7 @@
 	});
 
 	async function saveMessage() {
-		await fetch(apiUrl, {
+		await fetch("https://signs-api.rcastellotti.dev/api/", {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json'
