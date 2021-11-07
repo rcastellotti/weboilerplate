@@ -22,10 +22,8 @@ class Signs(db.Model):
         return {c.name: getattr(self, c.name) for c in self.__table__.columns}
 
 
-@app.post("/api")
+@app.post("/")
 def add():
-    if request.method == "OPTIONS":
-        return 204
     print(request.json)
     message = request.json["message"]
     sign = Signs(message=message, slug=generate(size=8))
@@ -34,7 +32,7 @@ def add():
     return{"message": "sign created", "sign": sign.as_dict()}
 
 
-@ app.get("/api/<slug>")
+@ app.get("/<slug>")
 def get(slug):
     sign = Signs.query.filter_by(slug=slug).first_or_404()
     return sign.as_dict(), 200

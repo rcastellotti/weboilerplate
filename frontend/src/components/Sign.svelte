@@ -11,7 +11,7 @@
 	});
 
 	async function saveMessage() {
-		await fetch("https://signs-api.rcastellotti.dev/api/", {
+		await fetch('https://signs-api.rcastellotti.dev', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json'
