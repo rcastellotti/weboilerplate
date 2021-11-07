@@ -16,12 +16,12 @@ services:
     container_name: signs-rcastellotti-dev-backend
     environment:
       DB: postgresql+psycopg2://postgres:example@db/signs
+    command:
     ports:
       - 5003:5000
     restart: always
     networks:
       - web
-
     labels:
       - traefik.http.routers.signs.rule=Host(`signs-api.rcastellotti.dev`)
       - traefik.http.routers.signs.tls=true

@@ -24,6 +24,8 @@ class Signs(db.Model):
 
 @app.post("/api")
 def add():
+    if request.method == "OPTIONS":
+        return 204
     print(request.json)
     message = request.json["message"]
     sign = Signs(message=message, slug=generate(size=8))
