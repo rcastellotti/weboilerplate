@@ -11,7 +11,8 @@
 	});
 
 	async function saveMessage() {
-		await fetch('https://signs-api.rcastellotti.dev', {
+		console.log(process.env.API_URL);
+		await fetch('http://localhost:5003/', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json'

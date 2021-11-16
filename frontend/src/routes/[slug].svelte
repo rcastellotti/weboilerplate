@@ -1,7 +1,7 @@
 <script context="module">
 	import Sign from '$components/Sign.svelte';
 	export async function load({ page, fetch }) {
-		const res = await fetch('https://signs-api.rcastellotti.dev/' + page.params.slug);
+		const res = await fetch('http://backend:5000/' + page.params.slug);
 		if (res.ok) {
 			return {
 				props: {
