@@ -1,3 +1,5 @@
+## Tailwind CSS
+To generate needed css run: 
 ```
-docker exec -it signs-rcastellotti-dev-backend python3 -c "from app import db; db.create_all()"
+npx tailwindcss -i ./static/input.css -o ./static/output.css --watch
 ```
