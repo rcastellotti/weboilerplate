@@ -1,60 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Document</title>
-  </head>
-  <script>
-    if (localStorage.theme === "dark") {
-      document.documentElement.classList.add("dark");
-    }
-    tailwind.config = {
-      darkMode: "class",
-
-      corePlugins: {
-        preflight: false,
-      },
-    };
-    function toggleTheme() {
-      if (localStorage.theme !== "dark") {
-        document.documentElement.classList.add("dark");
-        localStorage.theme = "dark";
-      } else {
-        document.documentElement.classList.remove("dark");
-        localStorage.theme = "white";
-      }
-    }
-  </script>
-  <style type="text/tailwindcss">
-    @layer utilities {
-      *::-webkit-scrollbar {
-        display: none;
-      }
-
-      * {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-      }
-    }
-  </style>
-  <body class="bg-white dark:bg-black text-black dark:text-white">
-    <button
-      onclick="toggleTheme()"
-      class="shadow-md fixed bottom-2 right-2 bg-gray-100 dark:bg-zinc-900 rounded w-8 h-8 flex justify-center items-center"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="16"
-        height="16"
-        fill="currentColor"
-        class="bi bi-circle-half"
-        viewBox="0 0 16 16"
-      >
-        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
-      </svg>
-    </button>
-  </body>
-</html>
+{% extends "base.html" %}
+{% block meta %}
+    <meta property="og:title" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:description" content="" />
+    <meta name="og:type" content="website" />
+    <meta name="og:image" content="" />
+    <meta name="og:image:secure_url" content="" />
+    <meta name="og:image:alt" content="" />
+{% endblock %}
+{% block content %}index{% endblock %}

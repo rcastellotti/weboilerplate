@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static',filename='output.css')}}" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+    <title>Document</title>
+  </head>
+  <script>
+    if (localStorage.theme === "dark") {
+      document.documentElement.classList.add("dark");
+    }
+    function toggleTheme() {
+      if (localStorage.theme !== "dark") {
+        document.documentElement.classList.add("dark");
+        localStorage.theme = "dark";
+      } else {
+        document.documentElement.classList.remove("dark");
+        localStorage.theme = "white";
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      *::-webkit-scrollbar {
+        display: none;
+      }
+
+      * {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    }
+  </style>
+  <body class="bg-white dark:bg-neutral-900 text-black dark:text-white">
+    {% block content %}{% endblock %}
+    <button
+      onclick="toggleTheme()"
+      class="shadow-md fixed bottom-2 right-2 bg-gray-100 dark:bg-neutral-800 rounded w-8 h-8 flex justify-center items-center"
+    >
+      <i class="bi bi-circle-half"> </i>
+    </button>
+  </body>
+</html>
