@@ -1,15 +1,41 @@
-from flask import Flask, request, render_template,url_for
-import markdown
-import requests
+from datetime import datetime
 import os
-import stripe
-from dotenv import load_dotenv
+from flask import (
+    Flask,
+    render_template,
+    make_response,
+    redirect,
+    request,
+    url_for,
+    jsonify,
+    Blueprint,
+    current_app as app,
+)
+import markdown
 
-app = Flask(__name__)
-load_dotenv()
+import stripe
+from nanoid import generate
+from flask_login import login_required
+import requests
+# import pycountry
+
+main = Blueprint("main", __name__)
+
+
+
+
+# from flask import Flask, request, render_template,url_for
+# import markdown
+# import requests
+# import os
+# import stripe
+# from dotenv import load_dotenv
+
+# app = Flask(__name__)
+# load_dotenv()
 
 stripe.api_key = os.getenv("STRIPE_API_KEY")
-@app.get("/")
+@main.get("/")
 def index():
     headers = {"Authorization": f"Bearer {os.getenv('TWITTER_BEARER_TOKEN')}"}
 
@@ -21,7 +47,7 @@ def index():
     return render_template("index.html", tweets=tweets)
 
 
-@app.route("/post/<path:path>/")
+@main.route("/post/<path:path>/")
 def posts(path):
     f = open(f"./posts/{path}.md", "r")
     htmlmarkdown = markdown.Markdown(
@@ -31,19 +57,19 @@ def posts(path):
     return render_template("post.html", post=post, meta=htmlmarkdown.Meta)
 
 
-@app.get("/statuto")
+@main.get("/statuto")
 def statuto():
     return render_template("statuto.html")
 
-@app.get("/associati")
+@main.get("/associati")
 def associati():
     return render_template("associati.html")
 
-@app.get("/redazione")
+@main.get("/redazione")
 def redazione():
     return render_template("redazione.html")
 
-@app.route("/pay", methods=["GET", "POST"])
+@main.route("/pay", methods=["GET", "POST"])
 def pay():
     if request.method == "GET":
         # stripe needs this format

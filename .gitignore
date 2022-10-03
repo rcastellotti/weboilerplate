@@ -1,3 +1,7 @@
 venv/
 __pycache__/
+<<<<<<< HEAD
 node_modules/
+=======
+.env
+>>>>>>> 554902996fbdd6f12a59ec956aa33c9de22250ae

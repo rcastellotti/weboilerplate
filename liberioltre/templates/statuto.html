@@ -1,0 +1,833 @@
+{% extends "base.html" %}
+{% block content %}
+    {% macro article(number,title) -%}
+        <div class="flex flex-col sm:flex-row gap-x-2 items-baseline border-b border-dashed sm:border-none">
+            <h3 id="articolo-{{ number }}">ARTICOLO {{ number }}</h3>
+            <div class="hidden sm:block h-4 grow border-b border-dashed border-slate-400"></div>
+            <h4>{{ title }}</h4>
+        </div>
+    {% endmacro -%}
+    <div class="text-justify prose prose-sm sm:prose-base prose-dark dark:prose-invert max-w-none prose-h3:m-0 prose-h4:m-0">
+        {{ article(1,"Denominazione")}}
+        <p>
+            L'Associazione ha la seguente denominazione:
+            <b>"LIBERI, OLTRE LE ILLUSIONI”</b>
+        </p>
+        {{ article(2,"Sede")}}
+        <p>
+            L'Associazione ha sede in Brunico (BZ). La modifica dell'indirizzo della
+            sede nell'ambito del predetto Comune è di competenza del Consiglio direttivo
+            e non costituisce modifica dello statuto sociale.
+            <br />
+            Il Consiglio Direttivo inoltre può trasferire la sede ed aprire sedi
+            secondarie e punti di aggregazione volti a sviluppare e consolidare lo scopo
+            associativo.
+        </p>
+        {{ article(3,"Durata")}}
+        <p>
+            L'Associazione è a tempo indeterminato. Essa potrà essere sciolta con
+            deliberazione dell'Assemblea Straordinaria degli Associati secondo le
+            maggioranze previste in questo Statuto o nelle sue successive modificazioni.
+        </p>
+        {{ article(4,"Scopo")}}
+        <p>
+            L' Associazione ha carattere volontario, è indipendente e non ha scopo di
+            lucro o finalità politiche. Essa costituisce un luogo aperto, plurale, non
+            ideologico e non identitario. Persegue la finalità di diffondere i principi
+            del merito, della competenza, della responsabilità individuale, della
+            trasparenza decisionale e informativa, della sussidiarietà, della tutela
+            delle libertà individuali, dell' economia di mercato, della concorrenza e
+            della solidarietà individuale e collettiva.
+            <br />
+            Si prefigge di stimolare l'uso dell'evidenza scientifica quale base
+            indispensabile della discussione e deliberazione collettiva. Consapevole
+            dell’attuale degrado economico, culturale e sociale che affligge il nostro
+            Paese, l’Associazione si propone di far crescere una comunità ampia, curiosa
+            e intraprendente che abbia come principale riferimento il benessere della
+            collettività allo scopo di far emergere le forze pragmatiche e competenti di
+            cui il Paese dispone e che possano favorirne il cambiamento.
+            <br />
+            Ci si propone così di poter sviluppare idee e formulare proposte concrete al
+            fine di operare nella direzione di un miglioramento del presente stato delle
+            cose. Intende farlo a partire da un riconoscimento realistico della
+            situazione esistente ponendo l' istruzione, la scienza e la tecnologia al
+            centro della propria attività, adottando una visione globale e mai
+            autarchica.
+            <br />
+            L' Associazione si ispira alle eredità culturali dell' Europa, dalle quali
+            si sono sviluppati i valori universali dei diritti inalienabili delle
+            persone, della libertà, della democrazia, dell’uguaglianza, della pace e
+            dello stato di diritto, per meritarci un Paese cosciente della realtà
+            storica attuale, responsabile delle proprie azioni e capace di creare
+            opportunità e benessere.
+            <br />
+            Si propone di sviluppare e favorire il dialogo, i rapporti e la
+            collaborazione tra associazioni e comitati del territorio nazionale anche al
+            fine di aggregare esperienze diverse ma con simili finalità, nell’osservanza
+            dei principi di eguaglianza, partecipazione, condivisione e sussidiarietà e
+            con l’obiettivo di creare una rete collaborativa di competenze per poter
+            perseguire gli scopi dell’Associazione.
+            <br />
+            Essa si propone altresì di promuovere, favorire, diffondere e sviluppare
+            attività di carattere culturale e sociale al fine di sollecitare il dialogo
+            tra i soggetti/enti presenti sul territorio nonché la partecipazione e
+            l'impegno civile e sociale di ogni cittadino.
+        </p>
+        {{ article(5,"Attività")}}
+        <p>
+            L'Associazione promuove le iniziative che ritiene necessarie e utili per
+            stimolare e orientare, presso l'opinione pubblica più vasta possibile, i
+            valori di cui all'articolo precedente, nel rispetto delle leggi e delle
+            norme vigenti.
+        </p>
+        <h2 id="soggetti">SOGGETTI</h2>
+        {{ article(6,"Soggetti")}}
+        <ol>
+            <li>La partecipazione avviene nella forma di ‘Associato’.</li>
+            <li>Gli associati si distinguono in: a) Fondatori b) Sostenitori</li>
+            <li>
+                Tutti gli associati si impegnano a partecipare per il migliore
+                raggiungimento delle finalità statutarie.
+            </li>
+            <li>
+                <p>
+                    Sono "Fondatori" gli associati che hanno costituito l'Associazione,
+                    signori <strong>Sabino Patruno</strong>, nato a Bari (BA), il giorno 2
+                    gennaio,1963, <strong>Dino Parrano</strong>, nato a Pordenone (PN), il
+                    giorno 30 settembre 1967, <strong>Icaro Tinti</strong>, nato a Empoli
+                    (FI), il giorno 3 giugno 1981, <strong>Costantino De Blasi</strong>,
+                    nato a Brindisi (BR), il giorno 5 marzo 1968, e
+                    <strong>Manuel Fae'</strong>, nato a Motta di Livenza (TV), il giorno 8
+                    marzo 1971, nonché, qualora aderiscano con le modalità di cui al
+                    presente statuto, i signori (in ordine alfabetico del cognome):
+                </p>
+                <ul>
+                    <li>
+                        <strong>Amenta Carlo</strong>, nato il giorno 24/05/1975 a Palermo
+                    </li>
+                    <li>
+                        <strong>Ardemagni Marco</strong>, nato il giorno 15/03/1963 a Milano
+                    </li>
+                    <li>
+                        <strong>Asproni Patrizia</strong>, nata il giorno 17/10/1959 a Nuoro
+                    </li>
+                    <li>
+                        <strong>Barbiero Valentina</strong>, nata il giorno 29/08/1981, a
+                        Belvedere Marittimo (CS)
+                    </li>
+                    <li>
+                        <strong>Bellandi Giuffrida Marco</strong>, nato il giorno 15/05/1997 a
+                        Cremona
+                    </li>
+                    <li>
+                        <strong>Bertonelli Umberto Alessandro</strong>, nato il giorno
+                        22/06/1995 a Sarnico (BG)
+                    </li>
+                    <li>
+                        <strong>Bicceri Cristina</strong>, nata il giorno 15/01/1978 a Savona
+                    </li>
+                    <li>
+                        <strong>Biondo Nicola</strong>, nato il giorno 04/08/1970 a Palermo
+                    </li>
+                    <li>
+                        <strong>Biral Mario</strong>, nato il giorno 02/10/1958 a Treviso
+                    </li>
+                    <li>
+                        <strong>Boldrin Michele</strong>, nato il giorno 20/08/1956 a Padova
+                    </li>
+                    <li>
+                        <strong>Brusco Sandro</strong>, nato il giorno 01/06/1961 a Papozze
+                    </li>
+                    <li>
+                        <strong>Calabrese Luigi</strong>, nato il giorno 09/11/1986 a Chiusi
+                    </li>
+                    <li>
+                        <strong>Canestrari Marco</strong>, nato il giorno 15/04/1983 a Pavia
+                    </li>
+                    <li>
+                        <strong>Capone Luciano</strong>, nato il giorno 10/01/1985 ad Ariano
+                        Irpino (AV)
+                    </li>
+                    <li>
+                        <strong>Dal Ferro Riccardo</strong>, nato il giorno 18/03/1987 a
+                        Thiene (VI)
+                    </li>
+                    <li>
+                        <strong>Davies Rebecca</strong>, nata il giorno 28/10/1976 nel Regno
+                        Unito
+                    </li>
+                    <li>
+                        <strong>De Blasi Costantino</strong>, nato il giorno 05/03/1968 a
+                        Brindisi
+                    </li>
+                    <li>
+                        <strong>Di Gaetano Lucio</strong>, nato il giorno 25/05/1976 a Isernia
+                    </li>
+                    <li>
+                        <strong>Favaretto Gerardo</strong>, nato il giorno 06/12/1955 a
+                        Preganziol (TV)
+                    </li>
+                    <li>
+                        <strong>Federico Giovanni</strong>, nato il giorno 30/12/1954 a
+                        Pistoia
+                    </li>
+                    <li>
+                        <strong>Ferrero Simona</strong>, nata il giorno 23/02/1999 a Torino
+                    </li>
+                    <li>
+                        <strong>Fornero Elsa</strong>, nata il giorno 07/05/1948 a San Carlo
+                        Canavese
+                    </li>
+                    <li>
+                        <strong>Giuricin Andrea</strong>, nato il giorno 08/04/1982 a Milano
+                    </li>
+                    <li>
+                        <strong>Kura Lorenc</strong>, nato il giorno 16/03/1994 a Kavaje
+                        (Albania)
+                    </li>
+                    <li>
+                        <strong>Lazzari Fabio</strong>, nato il giorno 29/07/1975 a Cremona
+                    </li>
+                    <li>
+                        <strong>Lecis Nazareno</strong>, nato il giorno 11/10/1995 a Cagliari
+                    </li>
+                    <li>
+                        <strong>Mantini Carola Quaia Saverio</strong>, nato il giorno
+                        31/01/1985 a Pontedera
+                    </li>
+                    <li>
+                        <strong>Siccardi Miro</strong>, nato il giorno 29/04/1954 a Imperia
+                    </li>
+                    <li>
+                        <strong>Sileoni Serena</strong>, nato il giorno 13/10/1980 a
+                        Civitanova Marche
+                    </li>
+                    <li>
+                        <strong>Stagnaro Carlo</strong>, nato il giorno 09/09/1977 a Sestri
+                        Levante
+                    </li>
+                    <li>
+                        <strong>Trucco Claudio</strong>, nato il giorno 28/01/1986 a Imperia
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>
+                    In qualsiasi momento il Collegio dei Fondatori, con deliberazione
+                    motivata, può far assumere la qualifica di Fondatore, con i diritti e
+                    doveri connessi a tale carica, ad altra persona fisica o giuridica. La
+                    qualifica di "Fondatore" viene riconosciuta in considerazione del
+                    rilevante apporto scientifico, economico od organizzativo che la persona
+                    può dare alla associazione. La qualifica di "Fondatore" si perde per
+                    esclusione a seguito di deliberazione motivata da parte del Collegio dei
+                    Fondatori, conseguente a gravi e reiterati comportamenti del soggetto,
+                    contrari allo scopo della Associazione o alle regole del presente
+                    statuto e regolamenti attuativi, ovvero quando il soggetto stesso non
+                    sia più in grado di dare il proprio apporto alla Associazione.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Sono "Sostenitori" le persone fisiche o giuridiche, pubbliche o private
+                    incluse le associazioni civili che, condividendo le finalità
+                    dell'Associazione, aderiscono allo scopo di cui all’articolo 4 del
+                    presente Statuto, nonché ai principi del Codice Etico. vi aderiscono e
+                    contribuiscono alla vita della associazione e alla realizzazione dei
+                    suoi scopi, con modalità che saranno determinate dal Consiglio
+                    Direttivo.
+                </p>
+            </li>
+            <li>
+                <p>
+                    La quota o il contributo associativo non sono trasmissibili e non è
+                    prevista la rivalutazione della partecipazione.
+                </p>
+            </li>
+        </ol>
+        {{ article(7,"Associati")}}
+        <ol>
+            <li>
+                Tutti gli associati hanno diritto di partecipare alla vita associativa e a
+                tutte le attività dell’Associazione secondo le modalità stabilite in
+                questo Statuto, hanno inoltre diritto di voto e partecipano all’elezione
+                degli organi associativi secondo le regole del presente Statuto.
+            </li>
+            <li>
+                Lo stato di ‘Associato’ è condizione necessaria per essere eletti o
+                designati alle cariche negli organi associativi secondo le norme dello
+                Statuto e, ove esistenti, le disposizioni regolamentari interne.
+            </li>
+            <li>
+                La richiesta di adesione, nonché l’accettazione della medesima, avviene
+                nei modi e nelle forme stabilite dal Consiglio Direttivo.
+            </li>
+            <li>
+                Gli Associati sono tenuti al versamento della quota associativa annuale.
+                Il versamento della prima quota associativa annuale comprende il
+                versamento della quota di iscrizione.
+            </li>
+            <li>
+                Ogni Associato può in qualsiasi momento recedere dall’Associazione. Il
+                recesso ha efficacia dal giorno successivo al ricevimento da parte del
+                Consiglio Direttivo della comunicazione scritta della sua volontà di
+                recedere e non dà diritto alla restituzione di quanto versato come quota
+                associativa, né ad una quota del patrimonio associativo.
+            </li>
+        </ol>
+        <h2 id="patrimonio-ed-esercizi-sociali">
+            PATRIMONIO ED ESERCIZI SOCIALI
+        </h2>
+        {{ article(8,"Patrimonio")}}
+        <ol>
+            <li>
+                Il patrimonio dell'Associazione è costituito:
+            </li>
+            <ul>
+                <li>
+                    dai beni mobili e immobili che, a qualsivoglia titolo, sono di proprietà
+                    dell'Associazione
+                </li>
+                <li>
+                    da eventuali fondi di riserva costituiti con gli avanzi netti di
+                    gestione.
+                </li>
+            </ul>
+            <p>
+                Le entrate dell'Associazione sono costituite:
+            </p>
+            <ul>
+                <li>
+                    dai versamenti effettuati dai soci
+                </li>
+                <li>
+                    da eventuali contributi di enti pubblici o privati, da erogazioni,
+                    elargizioni, donazioni e lasciti
+                </li>
+                <li>
+                    dai redditi che i beni mobili o immobili dell'Associazione possono
+                    produrre; d. da introiti realizzati nello svolgimento della sua attività
+                </li>
+                <li>
+                    <p>
+                        da ogni altra entrata che concorra a incrementare l'attivo sociale.
+                    </p>
+                </li>
+            </ul>
+            <li>
+                <p>
+                    Il Patrimonio associativo è destinato esclusivamente al funzionamento
+                    dell’Associazione, al conseguimento degli scopi statutari e alle spese
+                    di gestione. E' espressamente vietata la distribuzione, durante la vita
+                    dell’Associazione, sotto qualsiasi forma, di utili o avanzi di gestione,
+                    nonché di fondi, riserve e capitale. Il fondo comune associativo è
+                    indivisibile per tutta la durata dell’Associazione.
+                </p>
+            </li>
+        </ol>
+        {{ article(9,"Esercizio e Bilancio")}}
+        <p>
+            L'esercizio finanziario inizia con il primo gennaio e si chiude il trentuno
+            dicembre di ogni anno. Il consiglio direttivo provvede alla redazione del
+            bilancio annuale, da sottoporre all'approvazione dell'assemblea.
+            <br />
+            Nel bilancio dovranno, altresì, essere indicati specificamente i criteri di
+            gestione seguiti per il raggiungimento degli scopi statutari, conformemente
+            alle finalità che l'Associazione persegue.
+        </p>
+        {{ article(10,"Destinazione degli avanzi di gestione")}}
+        <p>
+            Gli eventuali utili o avanzi di gestione conseguiti saranno impiegati per la
+            realizzazione delle attività istituzionali dell'Associazione e di quelle a
+            esse direttamente connesse. È fatto divieto di distribuire, anche in modo
+            indiretto, utili e avanzi di gestione, nonché fondi, riserve o capitale
+            durante la vita dell'Associazione, a meno che la destinazione o la
+            distribuzione non siano imposte per legge.
+        </p>
+        {{ article(11,"Destinazione degli avanzi di gestione")}}
+        <ol>
+            <li>
+                Il Consiglio Direttivo quale prima delibera e, successivamente, con
+                cadenza annuale, stabilisce la quota annuale associativa. In casi
+                eccezionali e per comprovati motivi, il Consiglio Direttivo può stabilire
+                eventuali contributi straordinari per gli Associati, salvo il diritto di
+                recesso dall’Associazione da parte degli Associati.
+            </li>
+            <li>
+                I contributi versati saranno raccolti secondo modalità definite dal
+                Consiglio Direttivo.
+            </li>
+            <li>
+                Il versamento non crea altri diritti di partecipazione e, segnatamente,
+                non crea quote indivise di partecipazione trasmissibili a terzi, né per
+                successione a qualsiasi titolo, né per atto tra vivi.
+            </li>
+            <li>
+                L’Associazione non è in alcun modo responsabile, a nessun titolo, della
+                fonte di qualsivoglia forma di contributo o finanziamento diretto e
+                indiretto ricevuto da terzi.
+            </li>
+        </ol>
+        <h2 id="organi-sociali">
+            ORGANI SOCIALI
+        </h2>
+        {{ article(12,"Organi dell' Associazione")}}
+        <p>
+            Gli organi dell'Associazione sono:
+        </p>
+        <ul>
+            <li>
+                l'Assemblea degli Associati
+            </li>
+            <li>
+                il Consiglio Direttivo
+            </li>
+            <li>
+                il Presidente e uno o più Vicepresidenti
+            </li>
+            <li>
+                il Tesoriere
+            </li>
+            <li>
+                il Revisore o il Collegio dei Revisori, se nominati
+            </li>
+            <li>
+                il Collegio dei Probiviri
+            </li>
+            <li>
+                il Collegio dei Fondatori
+            </li>
+        </ul>
+        <h2 id="assemblea">
+            ASSEMBLEA
+        </h2>
+        {{ article(13,"Assemblea")}}
+        <ol>
+            <li>
+                L' Assemblea si riunisce almeno una volta l' anno ed è aperta a tutti e
+                solo gli Associati in regola con la quota associativa.
+            </li>
+            <li>
+                Discute e propone gli indirizzi culturali, organizzativi e di
+                funzionamento, anche attraverso mozioni per il Consiglio Direttivo, e
+                provvede all’elezione del Collegio dei Probiviri ed eventualmente del
+                Collegio dei Revisori.
+            </li>
+            <li>
+                E’ convocata dal Consiglio Direttivo, a maggioranza semplice dei propri
+                componenti, ogni qualvolta questa lo ritenga opportuno oppure ne sia fatta
+                richiesta da almeno la metà degli Associati. In caso di inerzia, vi
+                provvede il Presidente e - nell’ordine, per il caso di ulteriore inerzia -
+                il Vicepresidente (se nominato), il Presidente del Collegio dei Revisori,
+                e il Presidente del Collegio dei Probiviri.
+            </li>
+            <li>
+                La convocazione può altresì essere richiesta e, in caso di inerzia del
+                Consiglio Direttivo, deve essere messa in atto dal Collegio dei Revisori
+                entro 30 giorni dalla richiesta di convocazione.
+            </li>
+            <li>
+                L'Assemblea è convocata nel rispetto delle inderogabili norme di legge
+                mediante:
+            </li>
+            <ul>
+                <li>
+                    lettera raccomandata con avviso di ricevimento spedita agli associati al
+                    loro domicilio almeno cinque giorni prima dell'adunanza; ovvero
+                </li>
+                <li>
+                    messaggio di posta elettronica o fax inviati almeno cinque giorni prima
+                    dell'adunanza all'indirizzo di posta elettronica o al numero di fax
+                    comunicati per iscritto all'associazione, purché sia consentito
+                    verificare l'avvenuta ricezione da parte del destinatario; ovvero,
+                </li>
+                <li>
+                    nei limiti ammessi dalla legge, mediante altra modalità che consenta di
+                    verificare l'avvenuta ricezione da parte del destinatario;
+                </li>
+                <li>
+                    lettera consegnata a mano agli associati stessi e sottoscritta da questi
+                    ultimi per ricevuta entro il predetto termine.
+                </li>
+            </ul>
+            La convocazione deve contenere l'indicazione del luogo, giorno ed ora
+            dell'adunanza e l'elenco delle materie da trattare. Lo stesso avviso potrà
+            indicare l'ora, il luogo ed il giorno per l'adunanza in seconda convocazione
+            qualora la prima non risultasse legalmente costituita. Il giorno per la
+            seconda convocazione dovrà essere diverso da quello indicato per la prima.
+            Saranno tuttavia valide, anche se non convocate con le formalità di cui
+            sopra, le riunioni dell'assemblea qualora siano presenti tutti gli associati
+            e tutti i componenti del consiglio direttivo. Tuttavia, in tale ipotesi
+            ciascuno degli intervenuti può opporsi, all'inizio, alla discussione degli
+            argomenti sui quali non si ritenga sufficientemente informato. L'assemblea
+            può essere convocata anche fuori della sede sociale purché nel territorio
+            dello Stato Italiano.
+            <li>
+                È Presieduta dal Presidente dell' Associazione o, in caso di sua assenza o
+                impedimento, dal Vicepresidente anziano (se nominato) o da un membro del
+                Consiglio Direttivo. In mancanza dalla persona designata, a maggioranza,
+                dagli intervenuti.
+            </li>
+        </ol>
+        {{ article(14,"Competenza dell' Assemblea e maggioranze")}}
+        <ol>
+            <li>
+                L'Assemblea è ordinaria o straordinaria.
+            </li>
+            <li>
+                L'Assemblea ordinaria delibera sull'approvazione del bilancio, elegge i
+                membri del Consiglio Direttivo ad essa riservati e tra questi il
+                Presidente, i componenti il Collegio dei Revisori e il Collegio dei
+                Probiviri, decide sull'esclusione degli associati e su ogni altro oggetto
+                a essa demandato per legge o dal presente statuto.
+            </li>
+            <li>
+                Essa è validamente costituita, in prima convocazione, quando sia presente
+                o rappresentata almeno la metà degli Associati, e in seconda convocazione
+                qualunque sia il numero degli Associati presenti o rappresentati;
+                delibera, tanto in prima quanto in seconda convocazione, con la
+                maggioranza assoluta dei membri presenti o rappresentati all'adunanza.
+            </li>
+            <li>
+                L'Assemblea straordinaria delibera sulle modifiche dello statuto, fermo
+                quanto precisato nell'atto costitutivo ed all'
+                <a href="#articolo-2"> art. 2</a> del presente statuto, sullo scioglimento
+                dell’Associazione e la devoluzione del suo patrimonio e sulla nomina e i
+                poteri dei liquidatori.
+            </li>
+            <li>
+                Essa è validamente costituita, sia in prima sia in seconda convocazione,
+                quando siano presenti o rappresentati almeno i 2/3 degli Associati;
+                delibera, tanto in prima quanto in seconda convocazione, con la
+                maggioranza assoluta dei voti degli Associati presenti o rappresentati
+                all'adunanza. I Fondatori sono conteggiati per la determinazione del
+                quorum costitutivo dell'Assemblea, mentre per il quorum deliberativo delle
+                singole decisioni, sono conteggiati solo per le materie nelle quali il
+                Collegio dei Fondatori non ha competenza esclusiva.
+            </li>
+        </ol>
+        {{ article(15,"Diritto di voto e di intervento in Assemblea")}}
+        <ol>
+            <li>
+                Ognuno degli Associati, in regola con la quota di associazione, ha diritto
+                ad un voto. E’ ammesso, qualora deliberato dal Consiglio Direttivo, il
+                voto attraverso appositi strumenti digitali.
+            </li>
+            <li>
+                Ogni Associato può farsi rappresentare in Assemblea, mediante delega
+                scritta, da un altro Associato. Nessun Associato può cumulare più di una
+                delega.
+            </li>
+            <li>
+                La rappresentanza in Assemblea deve essere conferita per iscritto, con la
+                sottoscrizione del delegante, e la relativa documentazione deve essere
+                conservata dall'Associazione.
+            </li>
+        </ol>
+        <h2 id="amministrazione">
+            AMMINISTRAZIONE
+        </h2>
+        {{ article(16,"Nomina e durata del Consiglio Direttivo")}}
+        <ol>
+            <li>
+                L'Associazione è amministrata da un Consiglio Direttivo, composto da un
+                minimo di tre ad un massimo di nove membri, ma sempre in numero dispari,
+                ad eccezione del primo Consiglio nominato nell'atto costitutivo.
+            </li>
+            <li>
+                I membri del Consiglio Direttivo successivo al primo sono eletti in numero
+                di:
+                <ul>
+                    <li>
+                        uno dal Collegio dei Fondatori e due dall’Assemblea degli Associati
+                        qualora il numero dei suoi componenti sia fissato in tre;
+                    </li>
+                    <li>
+                        due dal Collegio dei Fondatori e tre dall’Assemblea degli Associati
+                        qualora il numero dei suoi componenti sia fissato in cinque;
+                    </li>
+                    <li>
+                        tre dal Collegio dei Fondatori e quattro dall’Assemblea degli
+                        Associati qualora il numero dei suoi componenti sia fissato in sette;
+                    </li>
+                    <li>
+                        quattro dal Collegio dei Fondatori e cinque dall’Assemblea degli
+                        Associati qualora il numero dei suoi componenti sia fissato in nove.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                I Consiglieri sono tutti domiciliati, per la carica, presso la sede della
+                Associazione. Salvo che non sia diversamente stabilito al momento della
+                nomina, i suoi componenti durano in carica per un triennio e sono
+                rieleggibili.
+            </li>
+            <li>
+                In ogni ipotesi di vacanza della carica di Consigliere diversa dalla
+                scadenza del mandato, il nuovo componente viene cooptato dal Consiglio e
+                resta in carica fino allo spirare del termine del componente sostituito.
+                Qualora venga meno la maggioranza dei Consiglieri in carica, si intende
+                decaduto l’intero Consiglio e il Presidente della Associazione o chi ne fa
+                le veci, convoca senza indugio l’assemblea dei Fondatori ed il Collegio
+                dei Fondatori per la nomina del nuovo Consiglio di Amministrazione.
+            </li>
+            <li>
+                Il Consiglio è convocato dal Presidente dell’Associazione o su richiesta
+                di 1/3 dei membri del Consiglio Direttivo entro 15 giorni dalla richiesta.
+                Il Consiglio è convocato sia nella sede dell'Associazione, sia altrove,
+                purchè in Italia, con avviso scritto inviato almeno 8 (otto) giorni prima
+                di quello previsto per la riunione, o 2 (due) giorni prima in caso di
+                urgenza, con qualsiasi mezzo che ne attesti la ricezione, ivi comprese la
+                raccomandata con avviso di ricevimento e la posta elettronica. L'avviso di
+                convocazione dovrà indicare il luogo, il giorno e l'ora della riunione,
+                nonché gli argomenti all'ordine del giorno. Saranno tuttavia valide, anche
+                se non convocate con le formalità di cui sopra, le riunioni del Consiglio
+                qualora siano presenti tutti i componenti del Consiglio.
+            </li>
+            <li>
+                Il Consiglio è presieduto dal Presidente, in sua assenza dal Vice
+                Presidente o, in sua assenza, dal più anziano di età dei presenti. Il
+                Consiglio direttivo delibera con la presenza di almeno la metà dei suoi
+                Componenti e a maggioranza di voti dei presenti. In caso di parità,
+                prevale il voto del Presidente.
+            </li>
+        </ol>
+        <h2 id="presidente">
+            PRESIDENTE
+        </h2>
+        {{ article(17,"Presidente e altre cariche")}}
+        <ol>
+            <li>
+                Tra i membri del Consiglio Direttivo, l’Assemblea elegge il Presidente.
+            </li>
+            <li>
+                Il Presidente eletto per la prima volta in sede di atto costitutivo
+                decadrà automaticamente insieme agli altri membri del Consiglio Direttivo
+                al momento dell’elezione del nuovo Consiglio Direttivo e del nuovo
+                Presidente da parte della prima Assemblea. Successivamente il Presidente
+                resta in carica per il periodo di tre anni ed è rieleggibile.
+            </li>
+            <li>
+                Il Consiglio Direttivo può nominare uno o più Vicepresidenti tra i membri
+                del Consiglio Direttivo che sostituiscono il Presidente in caso di sua
+                assenza o impedimento.
+            </li>
+            <li>
+                Il Presidente che si dimette e rinuncia all'ufficio deve darne
+                comunicazione scritta al Consiglio Direttivo e al Collegio dei Revisori se
+                nominato. La rinunzia ha effetto immediato. Il Consiglio informa
+                immediatamente l’Assemblea al fine di indire le elezioni entro i
+                successivi 30 giorni. Fino alla successiva nomina, le funzioni di
+                Presidente restano in capo al Vicepresidente più anziano di età.
+            </li>
+        </ol>
+        {{ article(18,"Poteri di amministrazione")}}
+        <ol>
+            <li>
+                Al Consiglio Direttivo spettano i poteri più ampi per l'amministrazione
+                della Associazione, tanto in via ordinaria che in via straordinaria, senza
+                eccezione alcuna.
+            </li>
+            <li>
+                Il Consiglio Direttivo può delegare le proprie attribuzioni o parte di
+                esse a un Comitato Esecutivo, nonché al Presidente o a uno o più dei suoi
+                membri con la qualifica di consigliere delegato.
+            </li>
+            <li>
+                Al Comitato Esecutivo si applicano le stesse regole di funzionamento
+                (convocazioni, quorum ecc) del Consiglio Direttivo, in quanto compatibili.
+            </li>
+        </ol>
+        {{ article(19,"Rappresentanza dell' Associazione")}}
+        <ol>
+            <li>
+                La firma e la rappresentanza della Associazione, di fronte ai terzi e in
+                giudizio, sono attribuite, al Presidente e, in caso di sua assenza od
+                impedimento al/ai Vicepresidente/i se nominati e agli eventuali
+                consiglieri delegati, tra cui il Tesoriere, nei limiti dei poteri e della
+                delega.
+            </li>
+            <li>
+                L'organo amministrativo può nominare procuratori per determinati atti o
+                categorie di atti.
+            </li>
+        </ol>
+        {{ article(20,"Tesoriere")}}
+        <ol>
+            <li>
+                Il Consiglio Direttivo sceglierà un Tesoriere, con il compito di gestire
+                il patrimonio nonché tutti i pagamenti e gli incassi di somme
+                dell'associazione, specificando l'ambito e i limiti della delega all'atto
+                della nomina. In ogni caso il Tesoriere amministra il patrimonio e cura la
+                gestione ordinaria.
+            </li>
+        </ol>
+        <h2 id="collegio-dei-revisori">
+            COLLEGIO DEI REVISORI
+        </h2>
+        {{article(21,"Composizione, nomina e durata del Revisore o del Collegio dei
+        revisori")}}
+        <ol>
+            <li>
+                La gestione dell'Associazione potrà essere sottoposta a controllo da un
+                Collegio dei Revisori (costituito da tre membri), anche non Associati, di
+                cui due nominati dall'Assemblea ed uno dal Collegio dei Fondatori, o da
+                parte di un singolo Revisore nominato dall'Assemblea. Il Collegio dei
+                Revisori dura in carica tre anni ed i suoi membri sono rieleggibili.
+            </li>
+            <li>
+                L'Assemblea può stabilire dei compensi per il Revisore o per i componenti
+                del Collegio dei Revisori, ai quali spetta, comunque, il rimborso delle
+                spese adeguatamente documentate e sostenute per ragioni di ufficio.
+            </li>
+        </ol>
+        <h2 id="collegio-dei-probiviri">
+            COLLEGIO DEI PROBIVIRI
+        </h2>
+        {{ article(22,"Il collegio dei Probiviri")}}
+        <p>
+            Il Collegio dei Probiviri è l’organo arbitrale e disciplinare
+            dell’Associazione competente in via esclusiva ad accertare e a pronunciarsi
+            sulle violazioni dello Statuto e del Codice Etico e dei Regolamenti e
+            direttive dell’Associazione ed è quindi titolare del potere disciplinare e
+            di comminare le relative sanzioni. Ciascun associato accetta di sottoporsi
+            al suo giudizio. Il Collegio si compone di tre membri di cui due nominati
+            dal Collegio dei Fondatori e uno dall'Assemblea
+        </p>
+        <h2 id="collegio-dei-fondatori">
+            COLLEGIO DEI FONDATORI
+        </h2>
+        {{ article(23, "Il collegio dei Fondatori")}}
+        <p>
+            Formano il Collegio tutti coloro che rivestono la qualifica di Fondatore.
+            Esso ha compito di alta vigilanza sul perseguimento degli scopi della
+            Associazione. Il Collegio è presieduto dal Presidente dell'associazione ove
+            egli sia un Fondatore, altrimenti elegge al suo interno un Presidente, il
+            quale rappresenta il Collegio in tutti i rapporti con gli altri organi
+            dell'associazione.
+        </p>
+        <p>
+            Il Collegio dei Fondatori delibera su tutte le materie ad esso riservate dal
+            presente statuto e le sue decisioni sono prese con la maggioranza dei due
+            terzi dei suoi componenti. Le riunioni del Collegio sono convocate dal
+            Presiedute tutte le volte in cui sia necessario deliberare sulle materie ad
+            esso riservate, ovvero ne faccia richiesta almeno un terzo dei suoi
+            componenti.
+        </p>
+        <p>
+            Il Collegio è convocato sia nella sede dell'Associazione, sia altrove,
+            purchè in Italia, con avviso scritto inviato almeno 8 (otto) giorni prima di
+            quello previsto per la riunione, o 2 (due) giorni prima in caso di urgenza,
+            con qualsiasi mezzo che ne attesti la ricezione, ivi comprese la
+            raccomandata con avviso di ricevimento e la posta elettronica.
+        </p>
+        <p>
+            L'avviso di convocazione dovrà indicare il luogo, il giorno e l'ora della
+            riunione, nonché gli argomenti all'ordine del giorno. Saranno tuttavia
+            valide, anche se non convocate con le formalità di cui sopra, le riunioni
+            del Collegio qualora siano presenti tutti i componenti del Collegio stesso e
+            del Consiglio Direttivo.
+        </p>
+        <h2 id="etica-della-associazione">
+            ETICA DELLA ASSOCIAZIONE
+        </h2>
+        {{ article(24,"Codice Etico")}}
+        <ol>
+            <li>
+                L’Associazione adotta un Codice Etico, approvato dal Collegio dei
+                Fondatori. Le sue modifiche dovranno essere approvate con le medesime
+                modalità previste per le modifiche statutarie.
+            </li>
+            <li>
+                Gli Associati hanno l’obbligo di rispettare il Codice Etico.
+            </li>
+        </ol>
+        <h2 id="libri-sociali">
+            LIBRI SOCIALI
+        </h2>
+        {{ article(25,"Libri sociali e registri contabili")}}
+        <ol>
+            <li>
+                L'Associazione tiene i libri previsti dalla legge e comunque:
+                <ul>
+                    <li>
+                        il libro degli associati
+                    </li>
+                    <li>
+                        il libro delle adunanze e delle deliberazioni dell'Assemblea
+                    </li>
+                    <li>
+                        il libro delle adunanze e delle deliberazioni del Consiglio Direttivo
+                    </li>
+                    <li>
+                        il libro delle adunanze e delle deliberazioni del Collegio dei
+                        Fondatori.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                La tenuta, la conservazione e l’aggiornamento dei libri sociali è posta a
+                carico del Consiglio Direttivo.
+            </li>
+        </ol>
+        <h2 id="scioglimento-e-liquidazione">
+            SCIOGLIMENTO E LIQUIDAZIONE
+        </h2>
+        {{ article(26,"Nomina dei liquidatori")}}
+        <p>
+            Qualora l'assemblea straordinaria degli Associati ritenga di dover
+            sciogliere l’Associazione, con la stessa delibera darà seguito alla
+            liquidazione e nominerà uno o più liquidatori, preferibilmente tra gli
+            Associati, determinandone i poteri e gli eventuali compensi e stabilendo le
+            modalità della liquidazione, nel rispetto delle norme di legge.
+        </p>
+        {{ article(27,"Devoluzione del patrimonio residuo")}}
+        <p>
+            In caso di scioglimento dell'Associazione e fatta salva ogni altra
+            disposizione di legge, l'intero patrimonio residuo sarà devoluto a scopi
+            sociali o di pubblica utilità.
+        </p>
+        {{ article(28,"Assenza di Compensi e Rimborsi")}}
+        <ol>
+            <li>
+                Dalla elezione o nomina in qualsiasi organo della Associazione non
+                consegue un diritto ad alcun compenso ed ogni attività svolta nell’ambito
+                della carica è prestata a titolo gratuito salvo, nel caso, per il Collegio
+                dei revisori se previsto nelle delibere di nomina.
+            </li>
+            <li>
+                È fatto salvo il rimborso solo delle spese, preventivamente autorizzate
+                dal Consiglio Direttivo, giustificate e documentate, sostenute
+                esclusivamente per ragioni dell'ufficio ricoperto da parte del Presidente,
+                dai membri del Consiglio Direttivo, dal Tesoriere, dai componenti del
+                Collegio dei Revisori e dal Collegio dei Probiviri – qualora ammesse e
+                alle condizioni e nei limiti dei criteri di proporzionalità ed inerenza,
+                prudente gestione e dei criteri fissati con delibera del Consiglio
+                Direttivo. Il rimborso avverrà da parte del Tesoriere sulla base della
+                disponibilità finanziaria dell’Associazione.
+            </li>
+        </ol>
+        <h2 id="disposizioni-generali-e-finali">
+            DISPOSIZIONI GENERALI E FINALI
+        </h2>
+        {{ article(29,"Regolamenti interni")}}
+        <p>
+            Il funzionamento dell'Associazione può essere disciplinato da appositi
+            regolamenti, predisposti dal Consiglio Direttivo e approvati dall'Assemblea
+        </p>
+        {{ article(30,"Modalità di tenuta delle adunanze degli organi associativi")}}
+        <p>
+            È possibile tenere le adunanze di tutti gli organi della associazione in
+            audio-video o audio conferenza, con interventi dislocati in più luoghi,
+            audio-video o audio collegati, a condizione che siano rispettati il metodo
+            collegiale e i principi di buona fede e di parità di trattamento degli
+            aventi diritto a partecipare, fermo il rispetto di ogni inderogabile norma
+            di legge applicabile al riguardo.
+        </p>
+        {{ article(31,"Rinvio")}}
+        <p>
+            Per quanto non espressamente previsto nel presente statuto, si fa espresso
+            riferimento alle disposizioni in materia dettate dal codice civile e dalle
+            altre leggi in materia.
+        </p>
+    </div>
+{% endblock %}

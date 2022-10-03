@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="sm:py-8 mx-auto text-center">
+    <div class="mx-auto mb-8 lg:mb-16 prose prose-dark dark:prose-invert max-w-none">
+        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">La redazione</h2>
+        <p class="sm:text-lg text-left">
+            Nel 2018, stanchi delle informazioni false che si ascoltano in tv e si leggono sui giornali, abbiamo
+            cominciato a girare dei video di divulgazione economica. A quel primo gruppo di amici, tutti esperti nei
+            rispettivi campi professionali e di ricerca, si sono via via aggiunte altre persone animate dal desiderio di
+            informare correttamente e preoccupate per il declino culturale dell' Italia.</p>
+        <p class="sm:text-lg text-left">
+            Oggi Liberi, Oltre le Illusioni raccoglie un centinaio di specialisti in campi diversi. </p>
+        <p class="sm:text-lg text-left">
+            Vogliamo continuare a crescere con il tuo contributo.</p>
+
+        <p>
+            <strong class="text-red-600 dark:text-red-400 sm:text-xl text-left">La nostra mission è informare, pronti a cambiare opinione quando i
+                fatti cambiano.
+            </strong>
+        </p>
+        </p>
+    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-y-8 sm:gap-y-16">
+        {% for i in range(40) %}
+        <div class="text-center text-gray-500 dark:text-gray-400">
+            <img class="mx-auto mb-4 w-16 h-16 sm:w-36 sm:h-36 rounded-full grayscale hover:grayscale-0 ease-in-out duration-700"
+                src="/static/costa.jpg" alt="Bonnie Avatar">
+            <h3 class="mb-1 text-lg sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                <a href="#">Lorem Ipsum Dolor</a>
+            </h3>
+            <small>lorem ipsum dolor sit amet</small>
+            <ul class="text-sm sm:text-base flex mt-4 space-x-2 sm:pace-x-4 justify-center">
+                <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+                <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+                <li><a href="#"><i class="bi bi-youtube"></i></a></li>
+                <li><a href="#"><i class="bi bi-twitch"></i></a></li>
+                <li><a href="#"><i class="bi bi-globe"></i></a></li>
+            </ul>
+        </div>
+        {%endfor%}
+    </div>
+</div>
+{% endblock %}

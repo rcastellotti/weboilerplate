@@ -1,7 +1,8 @@
 FROM python:3.9
-
-COPY requirements.txt requirements.txt
+WORKDIR /liberioltre
+COPY requirements.txt .
 RUN pip3 install -r requirements.txt
 COPY . .
-
-CMD ["gunicorn", "--bind", "0.0.0.0:5000", "wsgi:app"]
+COPY .env /liberioltre/.env
+ENV FLASK_DEBUG=0
+CMD ["gunicorn", "--bind", ":8080", "--workers", "2", "liberioltre:create_app()"]
